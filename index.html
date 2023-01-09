@@ -1,43 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Challenge by Frontend Mentor. Coded by Mateus Belício" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Expenses chart component</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Expenses chart component</title>
 
-  My balance
-  $921.48
+    <link rel="stylesheet" href="style.css" />
 
-  Spending - Last 7 days
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1 class="u-sr-only">Expenses chart component</h1>
 
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
+      <article class="c-component u-container u-grid">
+        <header class="c-component__heading bg-primary-400 text-neutral-200">
+          <h2 class="c-component__title fs-200">My balance</h2>
+          <span class="c-component__balance u-currency fs-500">921.48</span>
+        </header>
 
-  Total this month
-  $478.33
+        <section class="c-component__spending bg-neutral-200">
+          <h2 class="fs-500">Spending - Last 7 days</h2>
 
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+          <div class="c-component__chart c-chart u-grid" data-max="100">
+            <div class="c-chart__column">
+              <span class="c-chart__bar"><span class="c-chart__value">17.45</span></span>
+              <span class="c-chart__day fs-200">mon</span>
+            </div>
+            <div class="c-chart__column">
+              <span class="c-chart__bar"><span class="c-chart__value">34.91</span></span>
+              <span class="c-chart__day fs-200">tue</span>
+            </div>
+            <div class="c-chart__column">
+              <span class="c-chart__bar"><span class="c-chart__value">52.36</span></span>
+              <span class="c-chart__day fs-200">wed</span>
+            </div>
+            <div class="c-chart__column">
+              <span class="c-chart__bar"><span class="c-chart__value">31.07</span></span>
+              <span class="c-chart__day fs-200">thu</span>
+            </div>
+            <div class="c-chart__column">
+              <span class="c-chart__bar"><span class="c-chart__value">23.39</span></span>
+              <span class="c-chart__day fs-200">fri</span>
+            </div>
+            <div class="c-chart__column">
+              <span class="c-chart__bar"><span class="c-chart__value">43.28</span></span>
+              <span class="c-chart__day fs-200">sat</span>
+            </div>
+            <div class="c-chart__column">
+              <span class="c-chart__bar"><span class="c-chart__value">25.48</span></span>
+              <span class="c-chart__day fs-200">sun</span>
+            </div>
+          </div>
+
+          <div class="c-divider"></div>
+
+          <div class="c-component__summary">
+            <h3 class="text-neutral-400">Total this month</h3>
+
+            <div class="u-flex a-container">
+              <span class="c-component__total fs-600 u-currency">478.33</span>
+              <p class="c-component__variation">
+                +2.4% <span class="text-neutral-400">from last month</span>
+              </p>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+  </body>
 </html>
